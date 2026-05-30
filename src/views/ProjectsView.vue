@@ -42,7 +42,7 @@ const chargement = ref(true)
 
 onMounted(async () => {
   try {
-    const { data } = await axios.get('/api/projects')
+    const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/projects`)
     projets.value = data
   } catch (err) {
     console.error('Erreur:', err)

@@ -83,7 +83,7 @@ function onImage(e) {
 }
 
 async function chargerProjets() {
-  const { data } = await axios.get('/api/projects')
+  const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/projects`)
   projets.value = data
 }
 
@@ -100,13 +100,13 @@ async function ajouterProjet() {
       formData.append('image', fichierImage.value)
     }
 
-    await axios.post('/api/projects', formData, {
+    await axios.post(`${import.meta.env.VITE_API_URL}/api/projects`, formData, {
       headers: { 'Content-Type': 'multipart/form-data' }
     })
 
     succes.value = true
     erreur.value = false
-    Object.assign(form, { titre: '', description: '', technologies: '', emoji: '🚀', github: '' })
+    Object.assign(form, { titre: '', description: '', technologies: '', lien: '', github: '' })
     apercu.value = null
     fichierImage.value = null
     await chargerProjets()
@@ -117,7 +117,7 @@ async function ajouterProjet() {
 }
 
 async function supprimerProjet(id) {
-  await axios.delete(`/api/projects/${id}`)
+  await axios.delete(`${import.meta.env.VITE_API_URL}/api/projects/${id}`)
   await chargerProjets()
 }
 

@@ -44,7 +44,7 @@ async function envoyer() {
   envoi.value = true
   erreur.value = false
     try {
-      await axios.post('/api/contact', form)
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/contact`, form)
       envoye.value = true
       Object.assign(form, { nom: '', email: '', message: '' })
       setTimeout(() => envoye.value = false, 4000)
