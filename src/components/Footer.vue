@@ -5,7 +5,7 @@
       <p class="copy">
         © 2026 – Conçu et développé par
         <a
-          href="https://tonportfolio.vercel.app/"
+          href="https://portfolio-front-ten-chi.vercel.app/"
           target="_blank"
           class="copy-lien"
         >
