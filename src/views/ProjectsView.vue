@@ -10,7 +10,7 @@
         <div class="carte" v-for="projet in projets" :key="projet._id">
           <img
             v-if="projet.image"
-            :src="'http://localhost:5000' + projet.image"
+            :src="projet.image"
             class="carte-image"
           />
           <div class="carte-contenu">

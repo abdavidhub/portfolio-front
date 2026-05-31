@@ -41,7 +41,7 @@
         <button class="btn-ajouter" @click="ajouterProjet">Ajouter le projet →</button>
       </div>
 
-      <h2 style="margin-top:3rem; margin-bottom:1.5rem">Projets existants</h2>
+      <h2 style="margin-top:3rem; margin-bottom:4rem">Projets existants</h2>
       <div class="liste">
         <div class="item" v-for="projet in projets" :key="projet._id">
           <div class="item-info">
@@ -70,7 +70,6 @@ const form = reactive({
   titre: '',
   description: '',
   technologies: '',
-  emoji: '🚀',
   github: '',
   lien: '',
 })
@@ -94,7 +93,7 @@ async function ajouterProjet() {
     formData.append('titre', form.titre)
     formData.append('description', form.description)
     formData.append('technologies', form.technologies)
-    formData.append('emoji', form.emoji)
+    formData.append('lien', form.lien)
     formData.append('github', form.github)
     if (fichierImage.value) {
       formData.append('image', fichierImage.value)
