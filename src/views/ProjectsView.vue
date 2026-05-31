@@ -14,14 +14,13 @@
             class="carte-image"
           />
           <div class="carte-contenu">
-            <span class="emoji">{{ projet.emoji }}</span>
             <h3>{{ projet.titre }}</h3>
             <p>{{ projet.description }}</p>
             <div class="tags">
               <span class="tag" v-for="tech in projet.technologies" :key="tech">{{ tech }}</span>
             </div>
-            <a :href="projet.lien" class="lien">Voir le projet →</a>
-            <a :href="projet.github" class="lien">Voir sur GitHub →</a>
+            <a v-if="projet.lien" :href="projet.lien" target="_blank" class="lien">Voir le projet →</a>
+            <a v-if="projet.github" :href="projet.github" target="_blank" class="lien">Voir sur GitHub →</a>
           </div>
         </div>
       </div>

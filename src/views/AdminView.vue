@@ -70,8 +70,8 @@ const form = reactive({
   titre: '',
   description: '',
   technologies: '',
-  github: '',
   lien: '',
+  github: '',
 })
 
 function onImage(e) {
