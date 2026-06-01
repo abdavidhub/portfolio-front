@@ -12,7 +12,7 @@
           Mon objectif est de créer des expériences web intuitives, esthétiques et accessibles à tous, tout en contribuant à des projets innovants et passionnants.</p>
       </div>
         <div class="cv-boutons">
-           <a href="/CV.pdf" target="_blank" class="btn-cv">
+           <a href="/CV_AbdoulDavid.pdf" target="_blank" class="btn-cv">
                     👁 Voir mon CV</a>
           <a href="/CV.pdf" download class="btn-cv btn-cv-contour">
                  ↓ Télécharger mon CV</a>
