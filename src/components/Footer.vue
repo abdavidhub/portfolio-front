@@ -19,42 +19,26 @@
 
 <style scoped>
 .footer {
-  padding: 2rem 1rem;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid #334155;
+  padding: 2rem 0;
   margin-top: auto;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.copy {
   text-align: center;
-  color: var(--texte-secondaire);
-  font-size: 0.95rem;
-  line-height: 1.6;
 }
-
+.copy {
+  color: #94A3B8;
+  font-size: 0.85rem;
+}
 .copy-lien {
-  background: var(--gradient);
+  background: linear-gradient(135deg, #F97316, #EA580C);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s;
 }
-
-.copy-lien:hover {
-  opacity: 0.7;
-}
+.copy-lien:hover { opacity: 0.7; }
 
 @media (max-width: 768px) {
-  .footer {
-    padding: 1.5rem 1rem;
-  }
-
-  .copy {
-    font-size: 0.85rem;
-  }
+  .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
 }
 </style>

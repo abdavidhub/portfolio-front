@@ -1,14 +1,3 @@
-:root {
-  --couleur-fond: #0a0a0f;
-  --couleur-carte: #1a1a26;
-  --couleur-bordure: rgba(255,255,255,0.07);
-  --couleur-primaire: #7c3aed;
-  --couleur-secondaire: #06b6d4;
-  --texte-principal: #f1f5f9;
-  --texte-secondaire: #94a3b8;
-  --gradient: linear-gradient(135deg, #7c3aed, #06b6d4);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -16,14 +5,14 @@
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--couleur-fond);
-  color: var(--texte-principal);
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: #0F172A;
+  color: #F8FAFC;
 }
 
 h1, h2, h3 {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
 }
 
 a {
@@ -35,14 +24,4 @@ a {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 2rem;
-}
-
-#app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
 }

@@ -62,65 +62,92 @@ h1 {
   letter-spacing: -1px;
   margin-bottom: 0.75rem;
 }
+
 .gradient-texte {
-  background: var(--gradient);
+  background: linear-gradient(135deg, #F97316, #EA580C);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.sous-titre { color: var(--texte-secondaire); margin-bottom: 3rem; }
+
+.sous-titre { 
+  color: #94A3B8; 
+  margin-bottom: 4rem; 
+}
+
 .formulaire {
-  background: var(--couleur-carte);
-  border: 1px solid var(--couleur-bordure);
+  background: #1E293B;
+  border: 1px solid #334155;
   border-radius: 16px;
   padding: 2.5rem;
   max-width: 700px;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  margin: 0 auto;
+  margin-bottom: 15rem;
 }
+
 .ligne {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
 }
-.champ { display: flex; flex-direction: column; gap: 0.4rem; }
-label { font-size: 0.85rem; color: var(--texte-secondaire); }
+
+.champ { 
+  display: flex; 
+  flex-direction: 
+  column; gap: 0.4rem; 
+}
+
+label { font-size: 0.85rem; color: #94A3B8; }
 input, textarea {
   background: rgba(255,255,255,0.04);
-  border: 1.5px solid var(--couleur-bordure);
+  border: 1.5px solid #334155;
   border-radius: 8px;
-  padding: 0.75rem 1rem;
-  color: var(--texte-principal);
-  font-family: 'DM Sans', sans-serif;
+  padding: 0.75rem 2rem;
+  color: #F8FAFC;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 0.95rem;
-  resize: vertical;
+  resize: none;
+
 }
+
 input:focus, textarea:focus {
   outline: none;
-  border-color: var(--couleur-primaire);
+  border-color: #F97316;
 }
+
 .succes {
   padding: 0.85rem 1rem;
   border-radius: 8px;
   background: rgba(16,185,129,0.1);
   border: 1px solid rgba(16,185,129,0.3);
   color: #6ee7b7;
-  font-size: 0.9rem;
 }
+
+.erreur {
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  background: rgba(239,68,68,0.1);
+  border: 1px solid rgba(239,68,68,0.3);
+  color: #fca5a5;
+}
+
 .btn-envoyer {
   padding: 0.9rem;
   border-radius: 50px;
-  background: var(--gradient);
+  background: #F97316;
   color: white;
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
   font-size: 1rem;
   border: none;
   cursor: pointer;
   transition: 0.2s;
 }
-.btn-envoyer:hover { opacity: 0.85; transform: translateY(-2px); }
 
+.btn-envoyer:hover { background: #EA580C; transform: translateY(-2px); }
+.btn-envoyer:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 @media (max-width: 768px) {
   .ligne { grid-template-columns: 1fr; }
   .formulaire { padding: 1.5rem; }

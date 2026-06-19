@@ -41,7 +41,7 @@
         <button class="btn-ajouter" @click="ajouterProjet">Ajouter le projet →</button>
       </div>
 
-      <h2 style="margin-top:3rem; margin-bottom:4rem">Projets existants</h2>
+      <h2>Projets existants</h2>
       <div class="liste">
         <div class="item" v-for="projet in projets" :key="projet._id">
           <div class="item-info">
@@ -129,41 +129,62 @@ h1 {
   letter-spacing: -1px;
   margin-bottom: 2rem;
 }
+
 .gradient-texte {
-  background: var(--gradient);
+  background: linear-gradient(135deg, #F97316, #EA580C);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 1.5rem;
+}
+
 .formulaire {
-  background: var(--couleur-carte);
-  border: 1px solid var(--couleur-bordure);
+  background: #1E293B;
+  border: 1px solid #334155;
   border-radius: 16px;
   padding: 2rem;
   max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  margin-bottom: 4rem;
 }
-.champ { display: flex; flex-direction: column; gap: 0.4rem; }
-label { font-size: 0.85rem; color: var(--texte-secondaire); }
+
+.champ { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.4rem; 
+}
+
+label { 
+  font-size: 0.85rem; 
+  color: #94A3B8; 
+}
+
 input, textarea {
   background: rgba(255,255,255,0.04);
-  border: 1.5px solid var(--couleur-bordure);
+  border: 1.5px solid #334155;
   border-radius: 8px;
   padding: 0.75rem 1rem;
-  color: var(--texte-principal);
-  font-family: 'DM Sans', sans-serif;
+  color: #F8FAFC;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 0.95rem;
   resize: vertical;
 }
+
 input[type="file"] {
   padding: 0.5rem;
   cursor: pointer;
 }
+
 input:focus, textarea:focus {
   outline: none;
-  border-color: var(--couleur-primaire);
+  border-color: #F97316;
 }
+
 .apercu {
   width: 100%;
   max-height: 200px;
@@ -171,6 +192,7 @@ input:focus, textarea:focus {
   border-radius: 8px;
   margin-top: 0.5rem;
 }
+
 .succes {
   padding: 0.85rem 1rem;
   border-radius: 8px;
@@ -178,6 +200,7 @@ input:focus, textarea:focus {
   border: 1px solid rgba(16,185,129,0.3);
   color: #6ee7b7;
 }
+
 .erreur {
   padding: 0.85rem 1rem;
   border-radius: 8px;
@@ -185,44 +208,54 @@ input:focus, textarea:focus {
   border: 1px solid rgba(239,68,68,0.3);
   color: #fca5a5;
 }
+
 .btn-ajouter {
   padding: 0.9rem;
   border-radius: 50px;
-  background: var(--gradient);
+  background: #F97316;
   color: white;
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
   font-size: 1rem;
   border: none;
   cursor: pointer;
   transition: 0.2s;
 }
-.btn-ajouter:hover { opacity: 0.85; transform: translateY(-2px); }
+
+.btn-ajouter:hover { 
+  background: #EA580C; 
+  transform: translateY(-2px); 
+}
+
 .liste {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   max-width: 600px;
 }
+
 .item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--couleur-carte);
-  border: 1px solid var(--couleur-bordure);
+  background: #1E293B;
+  border: 1px solid #334155;
   border-radius: 8px;
   padding: 1rem 1.25rem;
 }
+
 .item-info {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
+
 .mini-image {
   width: 40px; height: 40px;
   object-fit: cover;
   border-radius: 6px;
 }
+
 .btn-supprimer {
   background: rgba(239,68,68,0.1);
   border: 1px solid rgba(239,68,68,0.3);

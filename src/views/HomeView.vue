@@ -5,14 +5,11 @@
       <span class="badge">Disponible pour des projets</span>
 
       <h1>
-        <span class="bonojour"> Bonjour,
-        je suis<br>
-        </span>
-          <span class="gradient-texte">David</span>
+        <span class="bonjour"> Bienvenue,
+        je suis <br></span>
+        <span class="gradient-texte">Abdoul David</span>
       </h1>
-
-      <p>Développeur Web Full Stack passionné par la création de sites web et d'applications modernes et performants.</p>
-
+      <p>Développeur Web Full Stack <br>// Étudiant en recherche de stage </p>
     <div class="boutons">
         <router-link to="/projets" class="btn-principal">Voir mes projets →</router-link>
         <router-link to="/contact" class="btn-contour">Me contacter</router-link>
@@ -39,67 +36,97 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-contenu {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.75rem;
+  padding-top: 5rem;
 }
 
 .badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.4rem 1rem;
   border-radius: 50px;
-  background: rgba(6,182,212,0.1);
-  border: 1px solid rgba(6,182,212,0.3);
-  color: #06b6d4;
+  background: rgba(249,115,22,0.1);
+  border: 1px solid rgba(249,115,22,0.3);
+  color: #F97316;
   font-size: 0.85rem;
   width: fit-content;
 }
 
+.dot-badge {
+  width: 8px; height: 8px;
+  background: #F97316;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
+.bonjour {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  min-width: 80px;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.cache {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
 h1 {
-  font-size: clamp(3rem, 8vw, 6rem);
-  line-height: 1.05;
-  letter-spacing: -2px;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 1.1;
+  letter-spacing: -1px;
 }
 
 .gradient-texte {
-  background: var(--gradient);
+  background: linear-gradient(135deg, #F97316, #EA580C);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-p {
-  color: var(--texte-secondaire);
-  font-size: 1.1rem;
-  max-width: 500px;
+p{
+  font-size: 1.25rem;
 }
 
 .boutons {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .btn-principal {
   padding: 0.75rem 1.75rem;
   border-radius: 50px;
-  background: var(--gradient);
+  background: #F97316;
   color: white;
   font-weight: 700;
   transition: 0.2s;
 }
+.btn-principal:hover { background: #EA580C; transform: translateY(-2px); }
 
-.btn-principal:hover { opacity: 0.85; transform: translateY(-2px); }
 .btn-contour {
   padding: 0.75rem 1.75rem;
   border-radius: 50px;
-  border: 1.5px solid var(--couleur-bordure);
-  color: var(--texte-principal);
+  border: 1.5px solid #334155;
+  color: #F8FAFC;
   transition: 0.2s;
 }
-
-.btn-contour:hover { border-color: var(--couleur-primaire); }
+.btn-contour:hover { border-color: #F97316; color: #F97316; }
 
 .socials {
   display: flex;
@@ -110,21 +137,33 @@ p {
   width: 44px; height: 44px;
   display: flex; align-items: center; justify-content: center;
   border-radius: 8px;
-  background: var(--couleur-carte);
-  border: 1px solid var(--couleur-bordure);
-  color: var(--texte-secondaire);
+  background: #1E293B;
+  border: 1px solid #334155;
+  color: #94A3B8;
   transition: 0.2s;
 }
-
 .social-btn:hover {
-  color: var(--texte-principal);
-  border-color: rgba(124,58,237,0.4);
+  color: #F8FAFC;
+  border-color: #F97316;
+}
+
+.deco-numero {
+  position: absolute;
+  right: -2rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.02);
+  pointer-events: none;
+  user-select: none;
 }
 
 @media (max-width: 768px) {
-  h1 { letter-spacing: -1px; }
+  h1 { letter-spacing: -0.5px; }
   .boutons { flex-direction: column; }
-  .btn-principal, .btn-contour { text-align: center; }
+  .deco-numero { display: none; }
 }
 </style>
 
