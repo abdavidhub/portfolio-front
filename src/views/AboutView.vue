@@ -16,7 +16,7 @@
         <div class="cv-boutons">
            <a href="/CVAbdoul_David.pdf" target="_blank" class="btn-cv">
                     👁 Voir mon CV</a>
-          <a href="/CV.pdf" download class="btn-cv btn-cv-contour">
+          <a href="/CVAbdoul_David.pdf" download class="btn-cv btn-cv-contour">
                  ↓ Télécharger mon CV</a>
         </div>
       </div>
