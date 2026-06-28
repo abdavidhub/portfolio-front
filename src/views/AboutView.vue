@@ -14,7 +14,7 @@
             <p>Mon objectif : intégrer une équipe dynamique où je pourrai contribuer, apprendre et évoluer.</p>
       </div>
         <div class="cv-boutons">
-           <a href="/CVAbdoul_David.pdf" target="_blank" class="btn-cv">
+           <a href="/CV_Abdoul_David.pdf" target="_blank" class="btn-cv">
                     👁 Voir mon CV</a>
           <a href="/CVAbdoul_David.pdf" download class="btn-cv btn-cv-contour">
                  ↓ Télécharger mon CV</a>
